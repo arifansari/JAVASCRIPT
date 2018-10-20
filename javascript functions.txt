@@ -1,0 +1,43 @@
+var starwars = ['Episode 4 A New Hope',
+    'Episode 5 The Empire Strikes Back',
+    'Episode 6 Return of the Jedi',
+    'Episode 1 The Phantom Menace',
+    'Episode 2 Attack of the Clones',
+    'Episode 3 Revenge of the Sith',
+    'Episode 7 The Force Awakens'];
+ 
+console.log(starwars.indexOf('Episode 7 The Force Awakens'));            6
+console.log(starwars.indexOf('Episode 3 Revenge of the Sith'));           5
+console.log(starwars.indexOf('Episode 2 Attack of the Clones', 3));      4
+console.log(starwars.indexOf('Episode 1 The Phantom Menace', -4));    3
+
+var locatedat = [];
+var enemies = ['Kylo Ren', 'Darth Vader', 'Storm Trooper', 'General Hux', 'Emperor Palpatine', 'Storm Trooper'];
+var enemy = 'Storm Trooper';
+var enemylocation = enemies.indexOf(enemy);
+while (enemylocation != -1) {
+    locatedat.push(enemylocation);
+    enemylocation = enemies.indexOf(enemy, enemylocation + 1);
+}
+console.log(locatedat); //  2, 5
+
+var wisdom = ['Yoda Says', 'Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.'];
+wisdom = wisdom.join(': ');      
+console.log(wisdom);
+ 
+//  Yoda Says: Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.
+
+
+var legoStarWarsGames = ['Empire Vs Rebels', 'Ultimate Rebel', 'The Quest for R2-D2'];
+var legoStarWarsSets = [10188, 75111, 75110, 75109];
+var availablePlatforms = ['Wii', 'Xbox', 'Playstation'];
+ 
+var gamesSetsPlatforms = legoStarWarsGames.concat(legoStarWarsSets, availablePlatforms);
+ 
+console.log(gamesSetsPlatforms);
+ 
+//  ["Empire Vs Rebels", "Ultimate Rebel", "The Quest for R2-D2", 10188, 75111, 75110, 75109, "Wii", "Xbox", "Playstation"]
+
+
+
+https://vegibit.com/most-useful-javascript-array-functions/
